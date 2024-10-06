@@ -1,0 +1,238 @@
+<section class="bg-gray py-5">
+  <div class="container py-5">
+    <div class="row justify-content-center">
+      <div class="col-lg-6">
+        <div class="card border-0 p-4 h-100">
+          <div class="card-header bg-transparent">
+            <h3 class="fw-bolder mb-0">Contact Us..</h3>
+          </div>
+          <div class="card-body">
+            <form [formGroup]="contactForm" class="mb-4">
+              <div class="row justify-content-center align-items-center">
+                <div class="col-lg-6">
+                  <div class="mb-3">
+                    <label for="fname" class="form-label fw-semibold">
+                      First Name
+                    </label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="fname"
+                      formControlName="first_name"
+                      placeholder="Enter your first name"
+                    />
+                  </div>
+                </div>
+                <div class="col-lg-6">
+                  <div class="mb-3">
+                    <label for="lname" class="form-label fw-semibold">
+                      Last Name
+                    </label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="lname"
+                      formControlName="last_name"
+                      placeholder="Enter your last name"
+                    />
+                  </div>
+                </div>
+                <div class="col-lg-12">
+                  <div class="mb-3">
+                    <label for="email" class="form-label fw-semibold">
+                      Email
+                    </label>
+                    <input
+                      type="email"
+                      class="form-control"
+                      id="email"
+                      formControlName="emailId"
+                      placeholder="name@example.com"
+                    />
+                    <div
+                      class="mt-1"
+                      *ngIf="
+                        contactForm.get('emailId')?.invalid &&
+                        contactForm.get('emailId')?.touched
+                      "
+                    >
+                      <small
+                        class="text-danger"
+                        *ngIf="contactForm.get('emailId')?.errors?.['required']"
+                        >Email is required.</small
+                      >
+                      <small
+                        class="text-danger"
+                        *ngIf="contactForm.get('emailId')?.errors?.['email']"
+                        >Please enter a valid email address.</small
+                      >
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-6">
+                  <div class="mb-3">
+                    <label for="mobile" class="form-label fw-semibold">
+                      Mobile Number
+                    </label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="mobile"
+                      formControlName="mobilenumber"
+                      placeholder="Enter your mobile"
+                    />
+                    <div
+                      class="mt-1"
+                      *ngIf="
+                        contactForm.get('mobilenumber')?.invalid &&
+                        contactForm.get('mobilenumber')?.touched
+                      "
+                    >
+                      <small
+                        class="text-danger"
+                        *ngIf="contactForm.get('mobilenumber')?.errors?.['required']"
+                        >Mobile number is required.</small
+                      >
+                      <small
+                        class="text-danger"
+                        *ngIf="contactForm.get('mobilenumber')?.errors?.['pattern']"
+                        >Please enter a valid 10-digit mobile number.</small
+                      >
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-lg-6">
+                  <div class="mb-3">
+                    <label for="pan" class="form-label fw-semibold">
+                      PAN Number
+                    </label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="pan"
+                      formControlName="pan_no"
+                      placeholder="Enter your PAN"
+                    />
+                    <div
+                      class="mt-1"
+                      *ngIf="
+                        contactForm.get('pan_no')?.invalid &&
+                        contactForm.get('pan_no')?.touched
+                      "
+                    >
+                      <small
+                        class="text-danger"
+                        *ngIf="contactForm.get('pan_no')?.errors?.['required']"
+                        >PAN number is required.</small
+                      >
+                      <small
+                        class="text-danger"
+                        *ngIf="contactForm.get('pan_no')?.errors?.['pattern']"
+                        >Please enter a valid PAN number (ABCDE1234F).</small
+                      >
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-6">
+                  <div class="mb-3">
+                    <label for="adhar" class="form-label fw-semibold">
+                      Adhar Number
+                    </label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="adhar"
+                      formControlName="adhaar_no"
+                      placeholder="Enter your Adhar"
+                    />
+                    <div
+                      class="mt-1"
+                      *ngIf="
+                        contactForm.get('adhaar_no')?.invalid &&
+                        contactForm.get('adhaar_no')?.touched
+                      "
+                    >
+                      <small
+                        class="text-danger"
+                        *ngIf="contactForm.get('adhaar_no')?.errors?.['required']"
+                        >Aadhaar number is required.</small
+                      >
+                      <small
+                        class="text-danger"
+                        *ngIf="contactForm.get('adhaar_no')?.errors?.['pattern']"
+                        >Please enter a valid 12-digit Aadhaar number.</small
+                      >
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-6">
+                  <div class="mb-3">
+                    <label for="age" class="form-label fw-semibold">
+                      Age
+                    </label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="age"
+                      formControlName="age"
+                      placeholder="Enter your age"
+                    />
+                  </div>
+                </div>
+                <div class="col-lg-12">
+                  <div class="d-flex justify-content-start align-items-center">
+                    <div class="form-check me-5">
+                      <input
+                        class="form-check-input"
+                        type="radio"
+                        name="gender"
+                        formControlName="gender"
+                        value="Male"
+                        id="male"
+                      />
+                      <label class="form-check-label fw-semibold" for="male">
+                        Male
+                      </label>
+                    </div>
+                    <div class="form-check">
+                      <input
+                        class="form-check-input"
+                        type="radio"
+                        name="gender"
+                        id="female"
+                        value="Female"
+                        formControlName="gender"
+                      />
+                      <label class="form-check-label fw-semibold" for="female">
+                        Female
+                      </label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </form>
+            <div class="text-end">
+              <button class="btn btn-outline me-3" (click)="handleCancel()">
+                Cancel
+              </button>
+              <button
+                class="btn btn-primary btn-get-started"
+                [disabled]="contactForm.invalid"
+                (click)="handleSubmit(contactForm.value)"
+              >
+                Submit
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <app-contact-list
+          [contactList]="contactList"
+          (contactEdit)="handleEdit($event)"
+        />
+      </div>
+    </div>
+  </div>
+</section>

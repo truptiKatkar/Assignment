@@ -1,0 +1,54 @@
+/* You can add global styles to this file, and also import other style files */
+/* Importing Bootstrap SCSS file. */
+@import "bootstrap/scss/bootstrap";
+
+.bg-primary {
+  background: #473bf0 !important;
+}
+.bg-gray {
+  background: #f4f7fa;
+}
+.bg-dark {
+  background: #161c2d;
+}
+.text-light-grey {
+  color: #cccdd1;
+  font-weight: 400;
+  //   font-size: 14px;
+  letter-spacing: 0.5px;
+}
+.text-grey {
+  color: #90949b;
+}
+.text-3rem {
+  font-size: 3.3rem;
+}
+.list-style {
+  list-style: none;
+}
+.btn-get-started {
+  background-color: #473bf0 !important;
+  font-weight: 600;
+  padding: 0.9rem 1.5rem;
+  border-radius: 8px;
+  border: none;
+}
+.btn-outline {
+  // background-color: #473bf0 !important;
+  font-weight: 600;
+  padding: 0.9rem 1.5rem;
+  border-radius: 8px;
+  color: #473bf0;
+  border: 1px solid #473bf0;
+}
+.btn-outline:hover {
+  border: 1px solid #473bf0;
+  color: #473bf0;
+}
+.text-orange {
+  color: #f64b4b;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 13px;
+  letter-spacing: 1px;
+}
